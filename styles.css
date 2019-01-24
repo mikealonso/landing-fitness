@@ -1,0 +1,101 @@
+*{ /*le quitamos los estilos por default para que no se vea feo*/
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-size:16px;
+    font-family:'Avenir';
+}
+
+button{
+    width:25%;
+    border-radius: 0;
+    padding:1% 2%;
+    border:none;
+    cursor: pointer;
+}
+h1{
+    font-size:3rem;
+}
+
+/*Navbar*/
+header{
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    height:64px;
+    padding: 0 2%;
+    position: fixed; /*hace que la navbar se vea siempre aunque scrolleemos hacia abajo*/
+    background-color: white;
+    z-index: 2;
+}
+nav{
+    width:50%;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav2{
+    justify-content: flex-end;
+}
+
+header nav span{
+    padding: 0 2%;
+    cursor:pointer;
+    transition:all .3s ease; /*retrasa el efecto del hover*/
+}
+
+header nav span:hover{
+    background-color:black;
+    color:white;
+}
+
+/*Main Sections*/
+.main-section{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    display:flex;
+}
+
+.cover{
+    background-image: url(https://images.pexels.com/photos/268092/pexels-photo-268092.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+}
+article.layout{
+    width:100%;
+    height:100vh;
+    background-color:rgba(0, 0,0, .4);
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    color:white;
+}
+section.parallax{
+    background-image:url(https://images.pexels.com/photos/234272/pexels-photo-234272.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    opacity:.9;
+
+}
+/*Media queries
+@media(max-width:500px){
+    button{
+        width:90%;
+        background-color: blue;
+    }
+}
+
+@media(max-width:320px){
+    button{
+        width:90%;
+        background-color: red;
+    }
+}
+*/
+
