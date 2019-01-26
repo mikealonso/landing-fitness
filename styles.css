@@ -7,14 +7,45 @@
 }
 
 button{
-    width:25%;
+    width:20%;
     border-radius: 0;
-    padding:1% 2%;
+    padding:1% 1%;
     border:none;
     cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-top: 2%;
 }
+
+button:hover{
+    background-color:black;
+    color:white;
+}
+
+button .icono{
+    transition: all .3s ease;
+    margin-left: -10px;
+    opacity: 0;
+}
+
+button:hover .icono{    
+    margin-left: 20px;
+    opacity: 1;
+}
+
+button:focus{
+    outline: none;
+}
+
 h1{
-    font-size:3rem;
+    font-size:2.5rem;
+}
+
+h2{
+    font-size:2rem;
+}
+h3{
+    font-size:1.5rem;
 }
 
 /*Navbar*/
@@ -25,7 +56,8 @@ header{
     height:64px;
     padding: 0 2%;
     position: fixed; /*hace que la navbar se vea siempre aunque scrolleemos hacia abajo*/
-    background-color: white;
+    background-color: black;
+    color:white;
     z-index: 2;
 }
 nav{
@@ -33,6 +65,16 @@ nav{
     display:flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+#logo{
+    width:4rem;
+    height:100%;    
+    transition: all .5s ease; /*hace que los cambios en el hover se hagan lentamente y con efecto*/
+}
+
+#logo:hover{
+    cursor:pointer;
 }
 
 .nav2{
@@ -46,8 +88,8 @@ header nav span{
 }
 
 header nav span:hover{
-    background-color:black;
-    color:white;
+    background-color:white;
+    color:black;
 }
 
 /*Main Sections*/
@@ -55,15 +97,29 @@ header nav span:hover{
     width: 100%;
     min-height: 100vh;
     background-color: black;
-    display:flex;
 }
 
 .cover{
-    background-image: url(https://images.pexels.com/photos/268092/pexels-photo-268092.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-image: url(https://images.pexels.com/photos/209977/pexels-photo-209977.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     background-size: cover;
     background-position: center;
     background-repeat:no-repeat;
 }
+
+.cover2{
+    background-image: url(https://images.pexels.com/photos/342361/pexels-photo-342361.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+}
+
+.cover3{
+    background-image: url(https://images.pexels.com/photos/2273/sport-tennis-old-net.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+}
+
 article.layout{
     width:100%;
     height:100vh;
@@ -75,26 +131,83 @@ article.layout{
     color:white;
 }
 section.parallax{
-    background-image:url(https://images.pexels.com/photos/234272/pexels-photo-234272.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    min-height: 90vh;
+    background-image:url(https://images.pexels.com/photos/1784798/pexels-photo-1784798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     background-size:cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat:no-repeat;
     opacity:.9;
-
 }
-/*Media queries
+/*Seccion de Cards*/
+section.cards-info{
+    width: 100%;
+    min-height: 60vh;
+    background-color: black;
+    text-align:center;
+    padding-top: 2%;
+    color:white;
+    /*display: flex;
+    flex-direction: column;
+    justify-content: center;*/
+}
+
+
+article.cards-list{
+        margin-top: 4%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;        
+        flex-wrap: wrap;
+}
+div.card{
+    background-image: url(https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-size: cover;
+    background-position: center;
+    width:25%;
+    height: 50vh;
+    border-radius: 3px;    
+    margin-bottom: 5%;
+    color:black;
+    text-align: center;
+}
+
+div.white-layout{
+    background-color: rgba(255,255,255,.5);
+    padding: 3%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*footer*/
+#main-footer{
+    padding: 2% 5%;
+    background-color: black;
+    color:white;
+}
+
+#main-footer article{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+#main-footer a{
+    text-decoration: none;
+}
+
+/*Media queries*/
 @media(max-width:500px){
     button{
-        width:90%;
-        background-color: blue;
+        width:25%;
     }
 }
-
+/*
 @media(max-width:320px){
-    button{
-        width:90%;
-        background-color: red;
+    .cover{
+        background-size: 200px;
+        background-position: left;   
     }
 }
 */
