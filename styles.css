@@ -130,15 +130,7 @@ article.layout{
     flex-direction: column;
     color:white;
 }
-section.parallax{
-    min-height: 90vh;
-    background-image:url(https://images.pexels.com/photos/1784798/pexels-photo-1784798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-    background-size:cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat:no-repeat;
-    opacity:.9;
-}
+
 /*Seccion de Cards*/
 section.cards-info{
     width: 100%;
@@ -161,7 +153,6 @@ article.cards-list{
         flex-wrap: wrap;
 }
 div.card{
-    background-image: url(https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     background-size: cover;
     background-position: center;
     width:25%;
@@ -170,8 +161,17 @@ div.card{
     margin-bottom: 5%;
     color:black;
     text-align: center;
+    font-weight: bolder;
 }
-
+div.card1{
+    background-image: url(https://images.pexels.com/photos/704792/pexels-photo-704792.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+}
+div.card2{
+    background-image: url(https://images.pexels.com/photos/1103831/pexels-photo-1103831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+}
+div.card3{
+    background-image: url(https://images.pexels.com/photos/1277397/pexels-photo-1277397.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+}
 div.white-layout{
     background-color: rgba(255,255,255,.5);
     padding: 3%;
@@ -181,6 +181,34 @@ div.white-layout{
     justify-content: center;
 }
 
+/*Sección formulario*/
+section.parallax{
+    min-height: 60vh;
+    background-image:url(https://images.pexels.com/photos/1784798/pexels-photo-1784798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    opacity:.9;
+    display: flex;
+    justify-content: center;
+}
+.parallax .formulario{
+    display:flex;
+    align-items: center; 
+    justify-content: center;
+    flex-direction: column;
+    width: 50vw;
+}
+.parallax .formulario * {
+    margin-top: 10px;
+    
+}
+.parallax .formulario button {
+    margin-top: 30px;
+    width: 40%;
+} 
+
 /*footer*/
 #main-footer{
     padding: 2% 5%;
@@ -188,7 +216,7 @@ div.white-layout{
     color:white;
 }
 
-#main-footer article{
+#main-footer article:first-child{
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -196,19 +224,42 @@ div.white-layout{
 #main-footer a{
     text-decoration: none;
 }
+.fab{
+    color:white;
+    font-size: 30px;
+    cursor:pointer;
+}
+
+#main-footer article:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main-footer article:nth-child(2) * {
+    margin-right: 50px
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+a:hover {
+    background-color:black;
+    color:white;
+} 
 
 /*Media queries*/
-@media(max-width:500px){
+@media(max-width:425px){
     button{
         width:25%;
     }
+    div.card{
+        width:80%;
+    } 
+    .parallax .formulario button {
+        width: 80%;
+    } 
 }
-/*
-@media(max-width:320px){
-    .cover{
-        background-size: 200px;
-        background-position: left;   
-    }
-}
-*/
+
 
